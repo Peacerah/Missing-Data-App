@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>909</width>
+    <height>585</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>16</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_12">
+    <item>
+     <widget class="QFrame" name="frame_4">
+      <property name="frameShape">
+       <enum>QFrame::WinPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="maximumSize">
+          <size>
+           <width>788</width>
+           <height>499</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::WinPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>48</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_3">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>54</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(85, 85, 255);</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::WinPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QLabel" name="TitleLable">
+                 <property name="font">
+                  <font>
+                   <family>MS Shell Dlg 2</family>
+                   <pointsize>20</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 36pt &quot;MS Shell Dlg 2&quot;;
+font: 7pt &quot;MS Shell Dlg 2&quot;;
+font: 26pt &quot;MS Shell Dlg 2&quot;;
+font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#005500;&quot;&gt;APPLICATION FOR ESTIMATING MISSING DATA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>68</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QFrame" name="frame_2">
+              <property name="frameShape">
+               <enum>QFrame::WinPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QLabel" name="loadLabel">
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-style:italic; color:#ff0000;&quot;&gt;1- click to load the csv data&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_7">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>158</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <item>
+                    <widget class="QPushButton" name="loadDataButton">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; font-style:italic;&quot;&gt;Click to load the dataset with missing data&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="toolTipDuration">
+                      <number>-1</number>
+                     </property>
+                     <property name="statusTip">
+                      <string>Load Data Button</string>
+                     </property>
+                     <property name="text">
+                      <string>Load </string>
+                     </property>
+                     <property name="flat">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_3">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>248</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_9">
+                   <item>
+                    <widget class="QLabel" name="inputLabel">
+                     <property name="font">
+                      <font>
+                       <pointsize>8</pointsize>
+                      </font>
+                     </property>
+                     <property name="mouseTracking">
+                      <bool>false</bool>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::ClickFocus</enum>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="buddy">
+                      <cstring>input directry</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>18</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="columnLabel">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-style:italic; color:#ff0000;&quot;&gt;2- select the index column and the missing data column&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSplitter" name="splitter_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <widget class="QWidget" name="">
+                    <layout class="QVBoxLayout" name="verticalLayout">
+                     <item>
+                      <widget class="QLabel" name="indexColumnLabel">
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Index Column</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="indexComboBox">
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; font-style:italic;&quot;&gt;Click to select the index column&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="">
+                    <layout class="QVBoxLayout" name="verticalLayout_2">
+                     <item>
+                      <widget class="QLabel" name="dataColumnLable">
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Missing data Column</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="missingDataComboBox">
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; font-style:italic;&quot;&gt;Click to select the column with missing data&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line_7">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="methodLabel">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-style:italic; color:#ff0000;&quot;&gt;3- select the best fit method of estimation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_5">
+                   <item>
+                    <widget class="QComboBox" name="methodsComboBox">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Last Observation Carried Forward</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Next Observation Carried Backward</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Mean substitution</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Median substitution</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Bayesian ridge model</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Random Forest model</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_4">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>98</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <item>
+                    <widget class="QLabel" name="estimateLabel">
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-style:italic; color:#ff0000;&quot;&gt;4- estimate missing data&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_8">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>178</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QSplitter" name="splitter">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <widget class="QPushButton" name="estimateDataButton">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; font-style:italic;&quot;&gt;Click to fill in the missing data&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="toolTipDuration">
+                     <number>-1</number>
+                    </property>
+                    <property name="statusTip">
+                     <string>Estimate Button</string>
+                    </property>
+                    <property name="text">
+                     <string>Estimate</string>
+                    </property>
+                    <property name="flat">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                   <widget class="QProgressBar" name="progressBar">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="value">
+                     <number>0</number>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_8">
+                   <item>
+                    <widget class="QLabel" name="outputLabel">
+                     <property name="font">
+                      <font>
+                       <pointsize>8</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>28</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <spacer name="horizontalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>208</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="resources.qrc">:/icons/UniLogo1.jpg</pixmap>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="guideLabel">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Brief Guide
+This Application estimate missing data. 
+Follow the step below:
+1. Prepare a univariate data in csv format i.e 
+a data having an index column and a colunm having a missing data.
+2. Click the &lt;Load&gt; Button to import the data.
+3.Select the method that best fit the data. 
+4. Click the &lt;Estimate&gt; Button for imputing missing data</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="userLabel">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Designed and written by Abdulazeez Abdulsalam A.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Program: M.Sc Final Project&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Department: Surveying and Geoinformatics&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Supervisor: Ayodele O. G (Phd)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>909</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionClose"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionClear_All"/>
+    <addaction name="actionRefresh"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_App"/>
+    <addaction name="actionDownload_Latest_Version"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open </string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionClear_All">
+   <property name="text">
+    <string>Clear All</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </action>
+  <action name="actionAbout_App">
+   <property name="text">
+    <string>About App.</string>
+   </property>
+  </action>
+  <action name="actionDownload_Latest_Version">
+   <property name="text">
+    <string>Download Latest Version</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
