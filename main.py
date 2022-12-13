@@ -31,41 +31,35 @@ class MDE(QMainWindow):
         fileh.close()
         #Load the data containing the missing data
         self.loadDataButton.clicked.connect(self.loadData)
-        #The button that execute the missing data estimation
-        #self.estimateDataButton.clicked.connect(self.repost)
-        #self.refreshButton.clicked.connect(self.clearAll)
-        #self.about.clicked.connect(self.showMessage("Succes","Successful reposting"))
-        #self.progressBar.hide()
-        #self.specialPosting_groupBox.hide()
-        #self.methodsComboBox.currentTextChanged.connect(self.comboChanged)
-        #self.Posting_Category_Label.setFont(QFont('Times',16))
-        #self.Posting_Category_Label.setText(self.general_radioButton.text())
-        #self.general_radioButton.toggled.connect(self.onRadioButton)
-        #self.special_radioButton.toggled.connect(self.onRadioButton)
-        #self.welfare_radioButton.toggled.connect(self.onRadioButton)
-        #self.about.clicked.connect(self.showMessage("About TRADEK", "Developer: Abdulazeez Abdulsalam Adekunle\nSoftware Name: TRADEK\nVersion: 1.1"))
-        #self.clear_inputLabel.clicked.connect(self.clearInputDir)
-        #self.clear_outputLabel.clicked.connect(self.clearOutputDir)
-    #def clearInputDir(self):
-    #    self.inputLabel.setText(" ")
 
-    #def clearOutputDir(self):
-    #    self.outputLabel.setText(" ")
-    
-    #The function for the refresh button
     def comboChanged(self):
         self.Posting_Category_Label.setFont(QFont('Times',16))
         text = self.comboBox.currentText()
-        if self.comboBox.currentText() == "GENERAL POSTING":
+        if self.comboBox.currentText() == "Last Observation Carried Forward":
             self.specialPosting_groupBox.hide()
             self.posting_label.setText(text + ' ' + 'SELECTED')
             #self.Posting_Category_Label.setFont(QFont('Times',16))
             self.Posting_Category_Label.setText(text + ' ' + 'INTERFACE')
-        if self.comboBox.currentText() == "SPECIAL POSTING":
+        if self.comboBox.currentText() == "Next Observation Carried Backward":
             self.specialPosting_groupBox.show()
             self.posting_label.setText(text + ' ' + 'SELECTED')
             self.Posting_Category_Label.setText(text + ' ' + 'INTERFACE')
-        if self.comboBox.currentText() == "WELFARE POSTING":
+        if self.comboBox.currentText() == "Mean substitution":
+            self.specialPosting_groupBox.hide()
+            self.posting_label.setText(text + ' ' + 'SELECTED')
+            #self.Posting_Category_Label.setFont(QFont('Times',16))
+            #self.Posting_Category_Label.setText(radiobut.text())
+            self.Posting_Category_Label.setText(text + ' ' + 'INTERFACE')
+        if self.comboBox.currentText() == "Median substitution":
+            self.specialPosting_groupBox.hide()
+            self.posting_label.setText(text + ' ' + 'SELECTED')
+            #self.Posting_Category_Label.setFont(QFont('Times',16))
+            self.Posting_Category_Label.setText(text + ' ' + 'INTERFACE')
+        if self.comboBox.currentText() == "Bayesian ridge model":
+            self.specialPosting_groupBox.show()
+            self.posting_label.setText(text + ' ' + 'SELECTED')
+            self.Posting_Category_Label.setText(text + ' ' + 'INTERFACE')
+        if self.comboBox.currentText() == "Random Forest model":
             self.specialPosting_groupBox.hide()
             self.posting_label.setText(text + ' ' + 'SELECTED')
             #self.Posting_Category_Label.setFont(QFont('Times',16))
@@ -109,41 +103,13 @@ class MDE(QMainWindow):
         self.myThread.change_value.connect(self.setProgressValue)
         self.myThread.start()
         
-##        # create a new column and use np.select to assign values to it using our lists as arguments
-##        if self.methodsComboBox.currentText() == "GENERAL POSTING":
-##            
-##            
-##        if self.methodsComboBox.currentText() == "SPECIAL POSTING":
-##        
-##        if self.methodsComboBox.currentText() == "WELFARE POSTING":
-##        
-##            
-##
-##     
-##        
-##        
-##        if self.methodsComboBox.currentText() == "GENERAL POSTING":
-##            
-##        if self.methodsComboBox.currentText() == "SPECIAL POSTING":
-##            
-##        
-##        if self.methodsComboBox.currentText() == "WELFARE POSTING":
+
         
         self.nis_data.to_csv(self.output_data)
         self.myThread.finished.connect(lambda:self.showMessage("Success","Successful reposting"))
-        #self.showMessage("Success","Successful reposting")
+
         
-        #self.showMessage("Succes","Successful reposting")
-        
-        #mesgbox = QMessageBox()
-        #mesgbox.setIcon(QMessageBox.Warning)
-        #mesgbox.setWindowTitle(title)
-        #mesgbox.setText(text)
-        #mesgbox.setStandardButtons(QMessageBox.Ok)
-        #mesgbox.exec_()
-        
-        
-        
+     
         
         
         

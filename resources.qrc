@@ -1,8 +1,9 @@
 <RCC>
     <qresource prefix="icons">
-        <file>UniLogo1.jpg</file>    
+        <file>icons/UniLogo.jpg</file>
+        <file>icons/UniLogo1.jpg</file>
     </qresource>
     <qresource prefix="ui">
-        <file>Appui.ui</file>
+        <file>AppMiss.ui</file>
     </qresource>
 </RCC>
