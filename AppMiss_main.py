@@ -63,19 +63,32 @@ class MDE(QMainWindow):
     def estimate(self):
         self.outputFilename = QFileDialog.getSaveFileName(self, "Save the csv file of the filled data","c\\","Comma Seperated Value File(*.csv)")
         self.fillLineEdit.setText(str(self.outputFilename[0]))
+        self.output_data =  str(self.outputFilename[0])
         self.progressBar.show()
         self.myThread = WorkerThread()
         self.myThread.change_value.connect(self.setProgressValue)
         self.myThread.start()
-        
+        self.dataset = pd.read_csv(self.input_data,encoding='ISO-8859-1')
        
         if self.methodComboBox.currentText() == "Next Observation Carried Backward":
             Estimated = self.dataComboBox.currentText() +"_NOCB"
             print(Estimated)
-##            self.dataset[Estimated]= self.dataset[self.dataComboBox.currentText()].fillna(method ='bfill')
-##            self.dataset = self.dataset[[self.indexComboBox.currentText(), self.dataComboBox.currentText(),Estimated]]       
-##            self.dataset.to_csv(self.output_data)
-        #self.myThread.finished.connect(lambda:self.showMessage("Success","The missing data have been sucessfully filled by NOCB Method"))
+            self.dataset[Estimated]= self.dataset[self.dataComboBox.currentText()].fillna(method ='bfill')
+            print("Sucess - filled by NOCB")
+            self.dataset = self.dataset[[self.indexComboBox.currentText(), self.dataComboBox.currentText(),Estimated]]
+            print("Sucess - Column created")
+            self.dataset.to_csv(self.output_data)
+            print("Sucess - converted output to csv")
+        if self.methodComboBox.currentText() == "Last Observation Carried Forward":
+            Estimated = self.dataComboBox.currentText() +"_LOCF"
+            print(Estimated)
+            self.dataset[Estimated]= self.dataset[self.dataComboBox.currentText()].fillna(method ='ffill')
+            print("Sucess - filled by NOCB")
+            self.dataset = self.dataset[[self.indexComboBox.currentText(), self.dataComboBox.currentText(),Estimated]]
+        self.dataset.to_csv(self.output_data)
+        print("Sucess - converted output to csv")
+        self.myThread.finished.connect(lambda:self.showMessage("Success",f"The missing data have been sucessfully filled by {self.methodComboBox.currentText()} Method"))
+            #self.progressBar.hide()
             
 app = QApplication(sys.argv)
 app.setStyle("Fusion")
