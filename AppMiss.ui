@@ -218,7 +218,7 @@ color: rgb(255, 255, 255);</string>
       <string>missing_dataset.csv</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="fillLineEdit">
      <property name="geometry">
       <rect>
        <x>20</x>

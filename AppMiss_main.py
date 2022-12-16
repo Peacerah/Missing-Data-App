@@ -70,7 +70,7 @@ class MDE(QMainWindow):
         
        
         if self.methodComboBox.currentText() == "Next Observation Carried Backward":
-            Estimated = self.dataComboBox.currentText()+'_NOCB'
+            Estimated = self.dataComboBox.currentText() +"_NOCB"
             print(Estimated)
 ##            self.dataset[Estimated]= self.dataset[self.dataComboBox.currentText()].fillna(method ='bfill')
 ##            self.dataset = self.dataset[[self.indexComboBox.currentText(), self.dataComboBox.currentText(),Estimated]]       
